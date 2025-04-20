@@ -1,0 +1,12 @@
+<div class="container mt-4">
+  <h3>Statistique graphique</h3>
+
+  <label>Choisir un type de graphique :</label>
+  <select class="form-select w-25 mb-3" (change)="onChartTypeChange($event)">
+    <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+  </select>
+
+  <div style="width: 400px; height: 400px; margin: auto">
+    <canvas #chartCanvas></canvas>
+  </div>
+</div>
